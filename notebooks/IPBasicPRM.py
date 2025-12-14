@@ -98,6 +98,8 @@ class BasicPRM(IPPRMBase.PRMBase):
         
         # 1. check start and goal whether collision free (s. BaseClass)
         checkedStartList, checkedGoalList = self._checkStartGoal(startList,goalList)
+        # print(f"checkedStartList: {checkedStartList}")
+        # print(f"checkedGoalList: {checkedGoalList}")
         
         # 2. learn Roadmap
         self._learnRoadmapNearestNeighbour(config["radius"],config["numNodes"])
